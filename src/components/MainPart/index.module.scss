@@ -1,0 +1,144 @@
+.main {
+    margin-top: 40px ;
+    .makingWord {
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        width: 100%;
+        margin: 20px;
+
+        p {
+            font-size: 40px;
+        }
+
+        .hanging {
+            position: relative;
+
+            img {
+                width: 100%;
+            }
+            .head {
+                width: 50px;
+                height: 50px;
+                border: 1px solid black;
+                border-radius: 50%;
+                display: inline-block;
+                position: absolute;
+                right: 13%;
+                top: 14%;
+            }
+
+            .body {
+                border-left: 1px solid black;
+                height: 80px;
+                position: absolute;
+                display: inline-block;  
+                right: 23%;
+                top: 32%;
+            }
+
+            .leftHand {
+                border-left: 1px solid black;
+                height: 40px;
+                position: absolute;
+                display: inline-block;  
+                transform: rotate(20deg);
+                right: 26%;
+                top: 32%;
+            }
+
+            .rightHand {
+                @extend .leftHand;
+                right: 20%;
+                transform: rotate(-20deg);
+            }
+
+            .leftFoot {
+                @extend .leftHand;
+                top: 58%;
+                right: 27%;
+                transform: rotate(30deg);
+            }
+
+            .rightFoot {
+                @extend .rightHand;
+                top: 58%;
+                right: 19%;
+                transform: rotate(-30deg);
+            }
+
+            .lose {
+                background-color: red;
+                width: 100%;
+                transform: scale(1.2);
+                top: 30%;
+                position: absolute;
+                z-index: 999;
+                padding: 20px;
+
+                button {
+                    color: red;
+                    width: 50%;
+                    font-weight: 800;
+                }
+            }
+        }
+    }
+
+    .buttonLetters {
+        display: flex;
+        flex-wrap: wrap;
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+
+        button {
+            cursor: pointer;
+            margin: 2px;
+            width: 40px;
+            height: 40px;
+
+        }
+
+    }
+
+    .win {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgb(0, 136, 0);
+        padding: 10px;
+
+        h2 {
+            font-size: 30px;
+            text-transform: uppercase ;
+        }
+        img {
+            width: 60%;
+        }
+    }
+
+    .hint {
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+        margin: 0 auto;
+        align-items: center;
+        font-size: 20px;
+
+        .bigHint {
+            background-color: black;
+            border: 1px solid black;
+            padding: 10px;
+            width: 50%;
+            font-weight: 700;
+            border-radius: 20px;
+
+            &:hover {
+                background-color: transparent;
+            }
+        }
+    }
+}

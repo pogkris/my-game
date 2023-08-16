@@ -1,0 +1,19 @@
+.main {
+    display: flex;
+    justify-content: center;
+    .logo {
+        display: flex;
+
+        h1 {
+            font-size: 80px;
+            color: black;
+            text-shadow: 3px 2px red;
+            text-transform: uppercase;
+
+        }
+
+        img {
+            width: 180px;
+        }
+    }
+}
